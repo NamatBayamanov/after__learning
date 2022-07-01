@@ -1,5 +1,7 @@
 import { getExchangeRates } from "../../data/data";
 
+import {Outlet} from "react-router-dom";
+
 function ExchangeRates({from, to}) {
 
   const rate = getExchangeRates(`${from + to}`);
@@ -20,6 +22,7 @@ function ExchangeRates({from, to}) {
   return ( 
     <div>
       {from}/{to} = {rate};
+      <Outlet/>
     </div>
   );
 }

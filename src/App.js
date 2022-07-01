@@ -10,11 +10,13 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/list" element={<List/>}/>
-        <Route path="/rate" element={<ExchangeRates from={"USA"} to={"KGS"}/>}/>
+        <Route path="/rate" element={<ExchangeRates from={"USA"} to={"KGS"}/>}>
+          <Route path="/rate" element={<ExchangeRates from="EUR" to="USA"/>}/>
         
+        </Route>
+      
       </Routes>
 
-      <ExchangeRates from="EUR" to="USA"/>
     </div>
   );
 }
