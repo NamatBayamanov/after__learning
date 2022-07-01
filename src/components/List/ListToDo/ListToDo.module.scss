@@ -1,0 +1,14 @@
+.ListToDo {
+
+}
+
+.ListToDo {
+  display: flex;
+  & .item_text {
+    color: red;
+  }
+
+  & .strike {
+    text-decoration: line-through;
+  }
+}

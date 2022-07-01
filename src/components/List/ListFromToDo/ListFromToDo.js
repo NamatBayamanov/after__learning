@@ -11,10 +11,15 @@ function ListFromToDo({addtask}) {
     addtask(userInput);
     setUserInput("");
   }
+
+  const onChangeFunc = (event) => {
+    setUserInput(event.target.value);
+  }
+
   return ( 
     <div className={classes.ListFromToDo}>
       <form onSubmit={onSubmitTask}>
-        <input />
+        <input type="text" value={userInput} onChange={onChangeFunc}/>
         <button>Send</button>
       </form>
     </div>
